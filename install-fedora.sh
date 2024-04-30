@@ -7,9 +7,7 @@ sudo dnf install freeipmi-1.6.14-1.fc40.x86_64 hddtemp-0.3-0.56.beta15.fc40.x86_
 
 sudo mkdir -p /usr/lib/webapp-manager/
 
-sudo cp webapp-manager.py /usr/lib/webapp-manager/webapp-manager.py
-sudo cp webapp-manager.ui /usr/lib/webapp-manager/webapp-manager.ui
-sudo cp common.py /usr/lib/webapp-manager/common.py
+sudo cp -r . /usr/lib/webapp-manager/
 
 sudo cp webapp-manager.desktop /usr/share/applications/webapp-manager.desktop
 
