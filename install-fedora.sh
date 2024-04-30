@@ -13,3 +13,4 @@ sudo cp common.py /usr/lib/webapp-manager/common.py
 sudo cp webapp-manager.desktop /usr/share/applications/webapp-manager.desktop
 
 sudo cp webapp-manager /usr/bin/webapp-manager
+sudo chmod +x /usr/bin/webapp-manager
