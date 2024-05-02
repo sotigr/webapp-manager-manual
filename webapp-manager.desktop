@@ -1,3 +1,4 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=Web Apps
 Name[am]=የ ዌብ መተግበሪያዎች
@@ -149,7 +150,7 @@ GenericName[vi]=Những ứng dụng trình duyệt Web
 GenericName[zgh]=ⵜⵉⵙⵏⵙⵉⵡⵉⵏ ⵏ ⵡⵉⴱ
 GenericName[zh_CN]=Web 应用
 GenericName[zh_TW]=網路應用程式
-Exec=webapp-manager
+Exec=/bin/bash -c "cd /usr/lib/webapp-manager && /usr/bin/webapp-manager"
 Icon=webapp-manager
 Terminal=false
 Type=Application

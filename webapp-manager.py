@@ -29,6 +29,7 @@ setproctitle.setproctitle("webapp-manager")
 # i18n
 APP = 'webapp-manager'
 LOCALE_DIR = "share/locale"
+APP_DIR = "/usr/lib/webapp-manager/"
 locale.bindtextdomain(APP, LOCALE_DIR)
 gettext.bindtextdomain(APP, LOCALE_DIR)
 gettext.textdomain(APP)
@@ -68,7 +69,7 @@ class WebAppManagerWindow:
         self.icon_theme = Gtk.IconTheme.get_default()
 
         # Set the Glade file
-        gladefile = "share/webapp-manager/webapp-manager.ui"
+        gladefile = APP_DIR + "share/webapp-manager/webapp-manager.ui"
         self.builder = Gtk.Builder()
         self.builder.set_translation_domain(APP)
         self.builder.add_from_file(gladefile)
@@ -224,7 +225,7 @@ class WebAppManagerWindow:
         cell.set_property("surface", surface)
 
     def open_keyboard_shortcuts(self, widget):
-        gladefile = "share/webapp-manager/shortcuts.ui"
+        gladefile = APP_DIR + "share/webapp-manager/shortcuts.ui"
         builder = Gtk.Builder()
         builder.set_translation_domain(APP)
         builder.add_from_file(gladefile)
@@ -239,7 +240,7 @@ class WebAppManagerWindow:
         dlg.set_program_name(_("Web Apps"))
         dlg.set_comments(_("Run websites as if they were apps"))
         try:
-            h = open('share/common-licenses/GPL', encoding="utf-8")
+            h = open(APP_DIR + 'share/common-licenses/GPL', encoding="utf-8")
             s = h.readlines()
             gpl = ""
             for line in s:
