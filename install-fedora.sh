@@ -13,6 +13,12 @@ sudo cp -rf . /usr/lib/webapp-manager/
 sudo cp -rf webapp-manager.desktop /usr/share/applications/webapp-manager.desktop
 sudo cp -rf webapp-manager /usr/bin/webapp-manager
 
+sudo mkdir -p /share/icons/hicolor/scalable/apps/
+sudo cp -rf share/icons/hicolor/scalable/apps/webapp-manager.svg /share/icons/hicolor/scalable/apps/webapp-manager.svg
+
+sudo mkdir -p /share/icons/hicolor/scalable/categories/
+sudo cp -rf share/icons/hicolor/scalable/apps/webapp-manager.svg /share/icons/hicolor/scalable/categories/applications-webapps.svg
+
 sudo chmod -R +rx /usr/lib/webapp-manager/
 
 echo "Making executable"
